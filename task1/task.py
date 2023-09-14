@@ -1,10 +1,13 @@
+import sys
 import csv
 
-filename = input()
-row = int(input())
-col = int(input())
+def main():
+  file = sys.argv[1]
+  print(file)
+  row = sys.argv[2]
+  col = sys.argv[3]
 
-with open(filename) as f:
-  data = list(csv.reader(f, delimiter=","))
-  print(data[row][col])
+  with open(file) as f:
+    data = list(csv.reader(f, delimiter=","))
+    print(data[row][col])
       
