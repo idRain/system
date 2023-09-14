@@ -3,7 +3,6 @@ import csv
 
 def main():
   file = sys.argv[1]
-  print(file)
   row = sys.argv[2]
   col = sys.argv[3]
 
