@@ -11,14 +11,9 @@ def task(csvString):
 
 
     for row in reader:
-      r1 = int(row[0])
-      r2 = int(row[1])
-      r3 = int(row[2])
-      r4 = int(row[3])
-      r5 = int(row[4])
-
-      R.append([r1, r2, r3, r4, r5])
+      R.append([int(ri) for ri in row])
       n += 1
+
 
     H = 0.0
 
@@ -39,4 +34,3 @@ def task(csvString):
     return H
 
 print(task("1,0,4,0,0\n2,1,2,0,0\n2,1,0,1,1\n0,1,0,1,1\n0,1,0,2,1\n0,1,0,2,1"))
-
